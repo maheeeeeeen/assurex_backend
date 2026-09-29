@@ -1,0 +1,45 @@
+{
+  "total_records": 10000,
+  "seed": 42,
+  "splits": {
+    "train": {
+      "count": 7000,
+      "percentage": 70.0
+    },
+    "validation": {
+      "count": 1500,
+      "percentage": 15.0
+    },
+    "test": {
+      "count": 1500,
+      "percentage": 15.0
+    }
+  },
+  "class_counts": {
+    "Likely Valid": 3334,
+    "Likely Invalid": 3333,
+    "Manual Review Required": 3333
+  },
+  "category_counts": {
+    "Electronics": 1750,
+    "Wearables & Audio": 1703,
+    "Automotive": 1672,
+    "Appliances": 1667,
+    "Computers & Laptops": 1614,
+    "Smartphones & Mobile": 1594
+  },
+  "anomaly_statistics": {
+    "serial_mismatches": 517,
+    "date_contradictions": 547,
+    "excluded_damages": 1302,
+    "missing_receipts": 652,
+    "unauthorized_repairs": 1241,
+    "duplicate_claims": 667
+  },
+  "uniqueness_check": {
+    "unique_signatures": 10000,
+    "collisions_rejected": 0,
+    "duplicate_rows": 0
+  },
+  "generated_at": "2026-09-26T11:36:34.477275"
+}

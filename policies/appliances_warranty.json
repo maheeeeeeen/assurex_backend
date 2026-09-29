@@ -1,0 +1,123 @@
+{
+  "policy_id": "POL-APPLIANCES-001",
+  "policy_name": "Home Appliances Warranty",
+  "product_category": "Appliances",
+  "coverage_duration_months": 36,
+  "warranty_start_condition": "purchase_date",
+  "covered_faults": [
+    "Manufacturing Defect",
+    "Motor Failure",
+    "Compressor Failure",
+    "Thermostat Malfunction",
+    "Electrical Wiring Defect",
+    "Control Board Failure"
+  ],
+  "exclusions": [
+    "Accidental Damage",
+    "Power Surge Damage",
+    "Pest Infestation Damage",
+    "Cosmetic Wear",
+    "Unauthorized Modification",
+    "Commercial Use of Domestic Product",
+    "Damage from Improper Installation"
+  ],
+  "claim_reporting_period_days": 45,
+  "max_repairs_before_replacement": 4,
+  "authorized_service_required": true,
+  "mandatory_documents": [
+    "purchase_receipt",
+    "warranty_card",
+    "fault_evidence",
+    "product_image"
+  ],
+  "optional_documents": [
+    "repair_report",
+    "installation_record",
+    "serial_number_photo"
+  ],
+  "hard_fail_rules": [
+    {
+      "rule_id": "HF-001",
+      "description": "Warranty period has expired",
+      "condition": "warranty_expired",
+      "action": "reject"
+    },
+    {
+      "rule_id": "HF-002",
+      "description": "Damage type is in exclusion list",
+      "condition": "excluded_damage",
+      "action": "reject"
+    },
+    {
+      "rule_id": "HF-003",
+      "description": "No proof of purchase provided",
+      "condition": "no_purchase_receipt",
+      "action": "reject"
+    },
+    {
+      "rule_id": "HF-004",
+      "description": "Product used for commercial purposes (domestic warranty)",
+      "condition": "commercial_use",
+      "action": "reject"
+    }
+  ],
+  "warning_rules": [
+    {
+      "rule_id": "WR-001",
+      "description": "Serial number does not match across documents",
+      "condition": "serial_mismatch",
+      "action": "flag"
+    },
+    {
+      "rule_id": "WR-002",
+      "description": "Optional supporting documents are missing",
+      "condition": "missing_optional_docs",
+      "action": "flag"
+    },
+    {
+      "rule_id": "WR-003",
+      "description": "Product has had multiple prior repairs",
+      "condition": "high_repair_count",
+      "threshold": 3,
+      "action": "flag"
+    },
+    {
+      "rule_id": "WR-004",
+      "description": "Installation record not provided",
+      "condition": "no_installation_record",
+      "action": "flag"
+    }
+  ],
+  "manual_review_rules": [
+    {
+      "rule_id": "MR-001",
+      "description": "Warranty expiry within grace period",
+      "condition": "borderline_warranty",
+      "action": "manual_review"
+    },
+    {
+      "rule_id": "MR-002",
+      "description": "Contradictory dates detected in claim",
+      "condition": "contradictory_dates",
+      "action": "manual_review"
+    },
+    {
+      "rule_id": "MR-003",
+      "description": "Repair performed by unauthorized service center",
+      "condition": "unauthorized_repair",
+      "action": "manual_review"
+    },
+    {
+      "rule_id": "MR-004",
+      "description": "Product age exceeds expected lifespan for category",
+      "condition": "excessive_product_age",
+      "threshold_months": 60,
+      "action": "manual_review"
+    }
+  ],
+  "grace_period_days": 14,
+  "replacement_conditions": {
+    "min_repairs_for_replacement": 4,
+    "max_product_age_months": 48
+  }
+}

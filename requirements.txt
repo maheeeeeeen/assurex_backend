@@ -1,0 +1,45 @@
+# AssureX Claim Engine — Backend Dependencies
+# FastAPI + Server
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+python-multipart==0.0.9
+
+# ORM + Database
+sqlmodel==0.0.22
+sqlalchemy==2.0.35
+aiosqlite==0.20.0
+
+# Authentication
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.2.0
+
+# ML - Tabular
+scikit-learn==1.5.2
+xgboost==2.1.1
+lightgbm==4.5.0
+joblib==1.4.2
+
+# ML - Teachable Machine (Keras)
+tensorflow==2.17.0
+pillow==10.4.0
+
+# OCR
+pytesseract==0.3.13
+
+# Data Processing
+pandas==2.2.3
+numpy==1.26.4
+
+# Utilities
+python-dateutil==2.9.0
+pyyaml==6.0.2
+openpyxl==3.1.5
+python-dotenv==1.0.1
+
+# Image generation for claim cards
+pillow==10.4.0
+
+# Testing
+pytest==8.3.3
+httpx==0.27.2

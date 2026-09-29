@@ -1,0 +1,3 @@
+0 likely_valid
+1 likely_invalid
+2 manual_review

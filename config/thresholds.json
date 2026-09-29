@@ -1,0 +1,28 @@
+{
+  "strong_match": {
+    "max_confidence_difference": 0.05,
+    "require_same_class": true,
+    "min_confidence": 0.70,
+    "description": "Both models agree on the class with very close confidence scores"
+  },
+  "acceptable_match": {
+    "max_confidence_difference": 0.15,
+    "require_same_class": true,
+    "min_confidence": 0.60,
+    "description": "Both models agree on the class with moderate confidence difference"
+  },
+  "weak_match": {
+    "max_confidence_difference": 0.25,
+    "require_same_class": true,
+    "min_confidence": 0.50,
+    "description": "Both models agree but confidence difference is notable"
+  },
+  "model_disagreement": {
+    "require_same_class": false,
+    "description": "The two models predict different classes — claim routed to manual review"
+  },
+  "uncertain_result": {
+    "min_confidence_below": 0.50,
+    "description": "Either model has low confidence — claim routed to manual review"
+  }
+}

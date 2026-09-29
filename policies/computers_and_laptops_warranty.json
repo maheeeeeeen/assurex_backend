@@ -1,0 +1,110 @@
+{
+  "policy_id": "POL-COMPUTING-001",
+  "policy_name": "Commercial & Consumer Computing Systems Warranty",
+  "product_category": "Computers & Laptops",
+  "coverage_duration_months": 36,
+  "warranty_start_condition": "purchase_date",
+  "covered_faults": [
+    "Manufacturing Defect",
+    "Motherboard Capacitor Failure",
+    "Cooling Fan Bearing Seizure",
+    "RAM Controller Failure",
+    "Backlight Inverter Dropout",
+    "Power Brick Voltage Instability",
+    "NVMe Drive Interface Dropout"
+  ],
+  "exclusions": [
+    "Liquid Spill on Keyboard",
+    "Hinge Fracture from Drop",
+    "Overclocking Thermal Damage",
+    "Unauthorized Component Soldering",
+    "Chassis Impact Deformation",
+    "Cryptocurrency Mining Degradation"
+  ],
+  "claim_reporting_period_days": 30,
+  "max_repairs_before_replacement": 3,
+  "authorized_service_required": true,
+  "mandatory_documents": [
+    "purchase_receipt",
+    "fault_evidence",
+    "product_image"
+  ],
+  "optional_documents": [
+    "warranty_card",
+    "repair_report",
+    "diagnostic_log_report",
+    "serial_number_photo"
+  ],
+  "hard_fail_rules": [
+    {
+      "rule_id": "HF-001",
+      "description": "Warranty period has expired beyond threshold",
+      "condition": "warranty_expired",
+      "action": "reject"
+    },
+    {
+      "rule_id": "HF-002",
+      "description": "Damage caused by excluded event (spills, physical drop, mining)",
+      "condition": "excluded_damage",
+      "action": "reject"
+    },
+    {
+      "rule_id": "HF-003",
+      "description": "No proof of purchase receipt provided",
+      "condition": "no_purchase_receipt",
+      "action": "reject"
+    },
+    {
+      "rule_id": "HF-004",
+      "description": "Hardware motherboard altered with non-OEM soldering",
+      "condition": "unauthorized_modification",
+      "action": "reject"
+    }
+  ],
+  "warning_rules": [
+    {
+      "rule_id": "WR-001",
+      "description": "Chassis serial number does not match BIOS / Receipt",
+      "condition": "serial_mismatch",
+      "action": "flag"
+    },
+    {
+      "rule_id": "WR-002",
+      "description": "User self-upgraded RAM / SSD without certified technician sign-off",
+      "condition": "unverified_upgrade",
+      "action": "flag"
+    },
+    {
+      "rule_id": "WR-003",
+      "description": "High repair frequency on primary mainboard components",
+      "condition": "high_repair_count",
+      "threshold": 3,
+      "action": "flag"
+    }
+  ],
+  "manual_review_rules": [
+    {
+      "rule_id": "MR-001",
+      "description": "Warranty expiry within 10-day grace period",
+      "condition": "borderline_warranty",
+      "action": "manual_review"
+    },
+    {
+      "rule_id": "MR-002",
+      "description": "Contradictory timeline or purchase dates detected",
+      "condition": "contradictory_dates",
+      "action": "manual_review"
+    },
+    {
+      "rule_id": "MR-003",
+      "description": "Prior repair completed by unauthorized IT repair center",
+      "condition": "unauthorized_repair",
+      "action": "manual_review"
+    }
+  ],
+  "grace_period_days": 10,
+  "replacement_conditions": {
+    "min_repairs_for_replacement": 3,
+    "max_product_age_months": 36
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "policy_id": "POL-FURNITURE-001",
+  "policy_name": "Ergonomic Home Office & Structural Furniture Warranty",
+  "product_category": "Home Office & Furniture",
+  "coverage_duration_months": 60,
+  "warranty_start_condition": "delivery_date",
+  "covered_faults": [
+    "Manufacturing Defect",
+    "Hydraulic Gas Cylinder Failure",
+    "Steel Frame Weld Fracture",
+    "Mechanism Gear Jamming",
+    "Reclining Lock Failure",
+    "Structural Core Defect",
+    "Armrest Height Ratchet Malfunction"
+  ],
+  "exclusions": [
+    "Fabric Stains and Tears",
+    "Pet Claw Damage",
+    "Sunlight UV Fading",
+    "Weight Limit Overload Exceeded (Over 350 lbs)",
+    "Improper Self-Disassembly Damage",
+    "Commercial Facility Continuous Abuse"
+  ],
+  "claim_reporting_period_days": 60,
+  "max_repairs_before_replacement": 2,
+  "authorized_service_required": false,
+  "mandatory_documents": [
+    "purchase_receipt",
+    "fault_evidence",
+    "product_image"
+  ],
+  "optional_documents": [
+    "warranty_card",
+    "assembly_instruction_sheet",
+    "structural_batch_tag_photo"
+  ],
+  "hard_fail_rules": [
+    {
+      "rule_id": "HF-001",
+      "description": "5-year structural warranty period has expired",
+      "condition": "warranty_expired",
+      "action": "reject"
+    },
+    {
+      "rule_id": "HF-002",
+      "description": "Damage caused by excluded upholstery tear or overloading",
+      "condition": "excluded_damage",
+      "action": "reject"
+    },
+    {
+      "rule_id": "HF-003",
+      "description": "No proof of purchase from authorized distributor",
+      "condition": "no_purchase_receipt",
+      "action": "reject"
+    },
+    {
+      "rule_id": "HF-004",
+      "description": "Product subjected to industrial warehouse conditions exceeding rating",
+      "condition": "commercial_use",
+      "action": "reject"
+    }
+  ],
+  "warning_rules": [
+    {
+      "rule_id": "WR-001",
+      "description": "Manufacturing batch sticker does not match invoice model",
+      "condition": "serial_mismatch",
+      "action": "flag"
+    },
+    {
+      "rule_id": "WR-002",
+      "description": "Missing full-angle structural load photograph",
+      "condition": "missing_optional_docs",
+      "action": "flag"
+    }
+  ],
+  "manual_review_rules": [
+    {
+      "rule_id": "MR-001",
+      "description": "Claim filed within 14-day post-warranty grace window",
+      "condition": "borderline_warranty",
+      "action": "manual_review"
+    },
+    {
+      "rule_id": "MR-002",
+      "description": "Delivery date and claim date timeline anomaly",
+      "condition": "contradictory_dates",
+      "action": "manual_review"
+    },
+    {
+      "rule_id": "MR-003",
+      "description": "Field weld or gas piston replaced by unverified technician",
+      "condition": "unauthorized_repair",
+      "action": "manual_review"
+    }
+  ],
+  "grace_period_days": 14,
+  "replacement_conditions": {
+    "min_repairs_for_replacement": 2,
+    "max_product_age_months": 60
+  }
+}

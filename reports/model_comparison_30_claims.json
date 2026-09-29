@@ -1,0 +1,825 @@
+{
+  "summary": {
+    "total_claims": 35,
+    "agreement_rate_pct": 94.29,
+    "mean_confidence_difference": 0.1261,
+    "tabular_model_name": "XGBoost",
+    "tabular_model_accuracy_pct": 100.0,
+    "tm_model_name": "TeachableMachine_MobileNetV2",
+    "tm_model_accuracy_pct": 94.29,
+    "match_category_breakdown": {
+      "Strong Match": 15,
+      "Acceptable Match": 4,
+      "Weak Match": 11,
+      "Weak Match (>25% gap)": 3,
+      "Disagreement": 2
+    }
+  },
+  "claims": [
+    {
+      "claim_id": "CLM-01995",
+      "product_category": "Appliances",
+      "product_name": "Heavy-Duty Clothes Dryer",
+      "ground_truth": "Likely Valid",
+      "tabular_prediction": "Likely Valid",
+      "tabular_confidence": 0.9967,
+      "tm_prediction": "Likely Valid",
+      "tm_confidence": 0.8064,
+      "confidence_difference": 0.1903,
+      "agreement": true,
+      "match_category": "Weak Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.9967,
+        "Likely Invalid": 0.0009,
+        "Manual Review Required": 0.0024
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.8064,
+        "Likely Invalid": 0.0369,
+        "Manual Review Required": 0.1567
+      }
+    },
+    {
+      "claim_id": "CLM-00775",
+      "product_category": "Appliances",
+      "product_name": "French Door Refrigerator",
+      "ground_truth": "Manual Review Required",
+      "tabular_prediction": "Manual Review Required",
+      "tabular_confidence": 0.997,
+      "tm_prediction": "Likely Valid",
+      "tm_confidence": 0.6899,
+      "confidence_difference": 0.3071,
+      "agreement": false,
+      "match_category": "Disagreement",
+      "tabular_probabilities": {
+        "Likely Valid": 0.0018,
+        "Likely Invalid": 0.0012,
+        "Manual Review Required": 0.997
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.6899,
+        "Likely Invalid": 0.0096,
+        "Manual Review Required": 0.3005
+      }
+    },
+    {
+      "claim_id": "CLM-00062",
+      "product_category": "Appliances",
+      "product_name": "Electric Range Oven",
+      "ground_truth": "Likely Invalid",
+      "tabular_prediction": "Likely Invalid",
+      "tabular_confidence": 0.9975,
+      "tm_prediction": "Likely Invalid",
+      "tm_confidence": 0.9672,
+      "confidence_difference": 0.0303,
+      "agreement": true,
+      "match_category": "Strong Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.0019,
+        "Likely Invalid": 0.9975,
+        "Manual Review Required": 0.0007
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.0284,
+        "Likely Invalid": 0.9672,
+        "Manual Review Required": 0.0043
+      }
+    },
+    {
+      "claim_id": "CLM-00107",
+      "product_category": "Electronics",
+      "product_name": "Gaming Desktop Rig",
+      "ground_truth": "Likely Invalid",
+      "tabular_prediction": "Likely Invalid",
+      "tabular_confidence": 0.9974,
+      "tm_prediction": "Likely Invalid",
+      "tm_confidence": 0.9591,
+      "confidence_difference": 0.0383,
+      "agreement": true,
+      "match_category": "Strong Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.0016,
+        "Likely Invalid": 0.9974,
+        "Manual Review Required": 0.001
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.0359,
+        "Likely Invalid": 0.9591,
+        "Manual Review Required": 0.005
+      }
+    },
+    {
+      "claim_id": "CLM-00456",
+      "product_category": "Appliances",
+      "product_name": "Smart Dishwasher 24-inch",
+      "ground_truth": "Likely Valid",
+      "tabular_prediction": "Likely Valid",
+      "tabular_confidence": 0.9986,
+      "tm_prediction": "Likely Valid",
+      "tm_confidence": 0.8433,
+      "confidence_difference": 0.1553,
+      "agreement": true,
+      "match_category": "Weak Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.9986,
+        "Likely Invalid": 0.0003,
+        "Manual Review Required": 0.001
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.8433,
+        "Likely Invalid": 0.0077,
+        "Manual Review Required": 0.149
+      }
+    },
+    {
+      "claim_id": "CLM-02076",
+      "product_category": "Appliances",
+      "product_name": "Heavy-Duty Clothes Dryer",
+      "ground_truth": "Likely Valid",
+      "tabular_prediction": "Likely Valid",
+      "tabular_confidence": 0.9981,
+      "tm_prediction": "Likely Valid",
+      "tm_confidence": 0.9112,
+      "confidence_difference": 0.0869,
+      "agreement": true,
+      "match_category": "Acceptable Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.9981,
+        "Likely Invalid": 0.0003,
+        "Manual Review Required": 0.0016
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.9112,
+        "Likely Invalid": 0.0025,
+        "Manual Review Required": 0.0864
+      }
+    },
+    {
+      "claim_id": "CLM-02354",
+      "product_category": "Appliances",
+      "product_name": "Electric Range Oven",
+      "ground_truth": "Likely Valid",
+      "tabular_prediction": "Likely Valid",
+      "tabular_confidence": 0.9984,
+      "tm_prediction": "Likely Valid",
+      "tm_confidence": 0.7013,
+      "confidence_difference": 0.2971,
+      "agreement": true,
+      "match_category": "Weak Match (>25% gap)",
+      "tabular_probabilities": {
+        "Likely Valid": 0.9984,
+        "Likely Invalid": 0.0003,
+        "Manual Review Required": 0.0013
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.7013,
+        "Likely Invalid": 0.0081,
+        "Manual Review Required": 0.2906
+      }
+    },
+    {
+      "claim_id": "CLM-01916",
+      "product_category": "Electronics",
+      "product_name": "Gaming Desktop Rig",
+      "ground_truth": "Likely Valid",
+      "tabular_prediction": "Likely Valid",
+      "tabular_confidence": 0.9985,
+      "tm_prediction": "Likely Valid",
+      "tm_confidence": 0.7517,
+      "confidence_difference": 0.2468,
+      "agreement": true,
+      "match_category": "Weak Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.9985,
+        "Likely Invalid": 0.0003,
+        "Manual Review Required": 0.0012
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.7517,
+        "Likely Invalid": 0.0083,
+        "Manual Review Required": 0.24
+      }
+    },
+    {
+      "claim_id": "CLM-00178",
+      "product_category": "Electronics",
+      "product_name": "Galaxy Ultra Smartphone",
+      "ground_truth": "Manual Review Required",
+      "tabular_prediction": "Manual Review Required",
+      "tabular_confidence": 0.9945,
+      "tm_prediction": "Manual Review Required",
+      "tm_confidence": 0.9784,
+      "confidence_difference": 0.0161,
+      "agreement": true,
+      "match_category": "Strong Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.0031,
+        "Likely Invalid": 0.0023,
+        "Manual Review Required": 0.9945
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.0214,
+        "Likely Invalid": 0.0002,
+        "Manual Review Required": 0.9784
+      }
+    },
+    {
+      "claim_id": "CLM-00276",
+      "product_category": "Electronics",
+      "product_name": "Active Noise Cancelling Headphones",
+      "ground_truth": "Likely Valid",
+      "tabular_prediction": "Likely Valid",
+      "tabular_confidence": 0.9986,
+      "tm_prediction": "Likely Valid",
+      "tm_confidence": 0.8232,
+      "confidence_difference": 0.1754,
+      "agreement": true,
+      "match_category": "Weak Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.9986,
+        "Likely Invalid": 0.0003,
+        "Manual Review Required": 0.0011
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.8232,
+        "Likely Invalid": 0.0047,
+        "Manual Review Required": 0.1721
+      }
+    },
+    {
+      "claim_id": "CLM-00713",
+      "product_category": "Automotive",
+      "product_name": "ABS Wheel Speed Sensor",
+      "ground_truth": "Likely Valid",
+      "tabular_prediction": "Likely Valid",
+      "tabular_confidence": 0.9984,
+      "tm_prediction": "Likely Valid",
+      "tm_confidence": 0.7607,
+      "confidence_difference": 0.2377,
+      "agreement": true,
+      "match_category": "Weak Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.9984,
+        "Likely Invalid": 0.0003,
+        "Manual Review Required": 0.0013
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.7607,
+        "Likely Invalid": 0.0073,
+        "Manual Review Required": 0.232
+      }
+    },
+    {
+      "claim_id": "CLM-02268",
+      "product_category": "Automotive",
+      "product_name": "Performance Shock Absorbers",
+      "ground_truth": "Likely Valid",
+      "tabular_prediction": "Likely Valid",
+      "tabular_confidence": 0.9986,
+      "tm_prediction": "Likely Valid",
+      "tm_confidence": 0.8377,
+      "confidence_difference": 0.1609,
+      "agreement": true,
+      "match_category": "Weak Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.9986,
+        "Likely Invalid": 0.0003,
+        "Manual Review Required": 0.001
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.8377,
+        "Likely Invalid": 0.0074,
+        "Manual Review Required": 0.1549
+      }
+    },
+    {
+      "claim_id": "CLM-01559",
+      "product_category": "Electronics",
+      "product_name": "Mirrorless Camera Body",
+      "ground_truth": "Likely Invalid",
+      "tabular_prediction": "Likely Invalid",
+      "tabular_confidence": 0.9976,
+      "tm_prediction": "Likely Invalid",
+      "tm_confidence": 0.9213,
+      "confidence_difference": 0.0763,
+      "agreement": true,
+      "match_category": "Acceptable Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.0017,
+        "Likely Invalid": 0.9976,
+        "Manual Review Required": 0.0006
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.0686,
+        "Likely Invalid": 0.9213,
+        "Manual Review Required": 0.0101
+      }
+    },
+    {
+      "claim_id": "CLM-00535",
+      "product_category": "Appliances",
+      "product_name": "Front-Load Washing Machine",
+      "ground_truth": "Likely Invalid",
+      "tabular_prediction": "Likely Invalid",
+      "tabular_confidence": 0.9977,
+      "tm_prediction": "Likely Invalid",
+      "tm_confidence": 0.9846,
+      "confidence_difference": 0.0131,
+      "agreement": true,
+      "match_category": "Strong Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.0002,
+        "Likely Invalid": 0.9977,
+        "Manual Review Required": 0.0021
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.0,
+        "Likely Invalid": 0.9846,
+        "Manual Review Required": 0.0154
+      }
+    },
+    {
+      "claim_id": "CLM-02103",
+      "product_category": "Electronics",
+      "product_name": "Smart Watch Series 7",
+      "ground_truth": "Manual Review Required",
+      "tabular_prediction": "Manual Review Required",
+      "tabular_confidence": 0.9901,
+      "tm_prediction": "Likely Valid",
+      "tm_confidence": 0.7595,
+      "confidence_difference": 0.2306,
+      "agreement": false,
+      "match_category": "Disagreement",
+      "tabular_probabilities": {
+        "Likely Valid": 0.0084,
+        "Likely Invalid": 0.0015,
+        "Manual Review Required": 0.9901
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.7595,
+        "Likely Invalid": 0.0065,
+        "Manual Review Required": 0.234
+      }
+    },
+    {
+      "claim_id": "CLM-01987",
+      "product_category": "Electronics",
+      "product_name": "Smart Watch Series 7",
+      "ground_truth": "Likely Valid",
+      "tabular_prediction": "Likely Valid",
+      "tabular_confidence": 0.9982,
+      "tm_prediction": "Likely Valid",
+      "tm_confidence": 0.8352,
+      "confidence_difference": 0.163,
+      "agreement": true,
+      "match_category": "Weak Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.9982,
+        "Likely Invalid": 0.0003,
+        "Manual Review Required": 0.0014
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.8352,
+        "Likely Invalid": 0.0051,
+        "Manual Review Required": 0.1597
+      }
+    },
+    {
+      "claim_id": "CLM-01876",
+      "product_category": "Appliances",
+      "product_name": "Smart Dishwasher 24-inch",
+      "ground_truth": "Likely Invalid",
+      "tabular_prediction": "Likely Invalid",
+      "tabular_confidence": 0.9973,
+      "tm_prediction": "Likely Invalid",
+      "tm_confidence": 0.9974,
+      "confidence_difference": 0.0001,
+      "agreement": true,
+      "match_category": "Strong Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.0003,
+        "Likely Invalid": 0.9973,
+        "Manual Review Required": 0.0025
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.0014,
+        "Likely Invalid": 0.9974,
+        "Manual Review Required": 0.0012
+      }
+    },
+    {
+      "claim_id": "CLM-00785",
+      "product_category": "Electronics",
+      "product_name": "Galaxy Ultra Smartphone",
+      "ground_truth": "Likely Valid",
+      "tabular_prediction": "Likely Valid",
+      "tabular_confidence": 0.9986,
+      "tm_prediction": "Likely Valid",
+      "tm_confidence": 0.7499,
+      "confidence_difference": 0.2487,
+      "agreement": true,
+      "match_category": "Weak Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.9986,
+        "Likely Invalid": 0.0003,
+        "Manual Review Required": 0.0011
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.7499,
+        "Likely Invalid": 0.0132,
+        "Manual Review Required": 0.2369
+      }
+    },
+    {
+      "claim_id": "CLM-00283",
+      "product_category": "Appliances",
+      "product_name": "Smart Dishwasher 24-inch",
+      "ground_truth": "Likely Valid",
+      "tabular_prediction": "Likely Valid",
+      "tabular_confidence": 0.9986,
+      "tm_prediction": "Likely Valid",
+      "tm_confidence": 0.8012,
+      "confidence_difference": 0.1974,
+      "agreement": true,
+      "match_category": "Weak Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.9986,
+        "Likely Invalid": 0.0003,
+        "Manual Review Required": 0.0011
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.8012,
+        "Likely Invalid": 0.0047,
+        "Manual Review Required": 0.1941
+      }
+    },
+    {
+      "claim_id": "CLM-02139",
+      "product_category": "Electronics",
+      "product_name": "Galaxy Ultra Smartphone",
+      "ground_truth": "Manual Review Required",
+      "tabular_prediction": "Manual Review Required",
+      "tabular_confidence": 0.9952,
+      "tm_prediction": "Manual Review Required",
+      "tm_confidence": 0.6054,
+      "confidence_difference": 0.3898,
+      "agreement": true,
+      "match_category": "Weak Match (>25% gap)",
+      "tabular_probabilities": {
+        "Likely Valid": 0.0028,
+        "Likely Invalid": 0.0019,
+        "Manual Review Required": 0.9952
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.3881,
+        "Likely Invalid": 0.0065,
+        "Manual Review Required": 0.6054
+      }
+    },
+    {
+      "claim_id": "CLM-00543",
+      "product_category": "Electronics",
+      "product_name": "Galaxy Ultra Smartphone",
+      "ground_truth": "Likely Valid",
+      "tabular_prediction": "Likely Valid",
+      "tabular_confidence": 0.9987,
+      "tm_prediction": "Likely Valid",
+      "tm_confidence": 0.8007,
+      "confidence_difference": 0.198,
+      "agreement": true,
+      "match_category": "Weak Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.9987,
+        "Likely Invalid": 0.0003,
+        "Manual Review Required": 0.001
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.8007,
+        "Likely Invalid": 0.0061,
+        "Manual Review Required": 0.1933
+      }
+    },
+    {
+      "claim_id": "CLM-00684",
+      "product_category": "Electronics",
+      "product_name": "Galaxy Ultra Smartphone",
+      "ground_truth": "Likely Valid",
+      "tabular_prediction": "Likely Valid",
+      "tabular_confidence": 0.9985,
+      "tm_prediction": "Likely Valid",
+      "tm_confidence": 0.7563,
+      "confidence_difference": 0.2422,
+      "agreement": true,
+      "match_category": "Weak Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.9985,
+        "Likely Invalid": 0.0003,
+        "Manual Review Required": 0.0012
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.7563,
+        "Likely Invalid": 0.0059,
+        "Manual Review Required": 0.2378
+      }
+    },
+    {
+      "claim_id": "CLM-01150",
+      "product_category": "Electronics",
+      "product_name": "OLED 4K Smart TV",
+      "ground_truth": "Manual Review Required",
+      "tabular_prediction": "Manual Review Required",
+      "tabular_confidence": 0.9923,
+      "tm_prediction": "Manual Review Required",
+      "tm_confidence": 0.9053,
+      "confidence_difference": 0.087,
+      "agreement": true,
+      "match_category": "Acceptable Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.0047,
+        "Likely Invalid": 0.003,
+        "Manual Review Required": 0.9923
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.0935,
+        "Likely Invalid": 0.0012,
+        "Manual Review Required": 0.9053
+      }
+    },
+    {
+      "claim_id": "CLM-01657",
+      "product_category": "Electronics",
+      "product_name": "Galaxy Ultra Smartphone",
+      "ground_truth": "Likely Invalid",
+      "tabular_prediction": "Likely Invalid",
+      "tabular_confidence": 0.9982,
+      "tm_prediction": "Likely Invalid",
+      "tm_confidence": 0.9645,
+      "confidence_difference": 0.0337,
+      "agreement": true,
+      "match_category": "Strong Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.0016,
+        "Likely Invalid": 0.9982,
+        "Manual Review Required": 0.0003
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.0005,
+        "Likely Invalid": 0.9645,
+        "Manual Review Required": 0.035
+      }
+    },
+    {
+      "claim_id": "CLM-00973",
+      "product_category": "Automotive",
+      "product_name": "Ceramic Brake Pad Set",
+      "ground_truth": "Likely Invalid",
+      "tabular_prediction": "Likely Invalid",
+      "tabular_confidence": 0.9984,
+      "tm_prediction": "Likely Invalid",
+      "tm_confidence": 0.9892,
+      "confidence_difference": 0.0092,
+      "agreement": true,
+      "match_category": "Strong Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.0011,
+        "Likely Invalid": 0.9984,
+        "Manual Review Required": 0.0005
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.0,
+        "Likely Invalid": 0.9892,
+        "Manual Review Required": 0.0107
+      }
+    },
+    {
+      "claim_id": "CLM-00393",
+      "product_category": "Electronics",
+      "product_name": "Mirrorless Camera Body",
+      "ground_truth": "Likely Invalid",
+      "tabular_prediction": "Likely Invalid",
+      "tabular_confidence": 0.9975,
+      "tm_prediction": "Likely Invalid",
+      "tm_confidence": 0.9452,
+      "confidence_difference": 0.0523,
+      "agreement": true,
+      "match_category": "Acceptable Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.0019,
+        "Likely Invalid": 0.9975,
+        "Manual Review Required": 0.0006
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.049,
+        "Likely Invalid": 0.9452,
+        "Manual Review Required": 0.0058
+      }
+    },
+    {
+      "claim_id": "CLM-02465",
+      "product_category": "Automotive",
+      "product_name": "Performance Shock Absorbers",
+      "ground_truth": "Likely Invalid",
+      "tabular_prediction": "Likely Invalid",
+      "tabular_confidence": 0.9975,
+      "tm_prediction": "Likely Invalid",
+      "tm_confidence": 0.9909,
+      "confidence_difference": 0.0066,
+      "agreement": true,
+      "match_category": "Strong Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.0002,
+        "Likely Invalid": 0.9975,
+        "Manual Review Required": 0.0023
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.0,
+        "Likely Invalid": 0.9909,
+        "Manual Review Required": 0.0091
+      }
+    },
+    {
+      "claim_id": "CLM-01216",
+      "product_category": "Automotive",
+      "product_name": "Ceramic Brake Pad Set",
+      "ground_truth": "Manual Review Required",
+      "tabular_prediction": "Manual Review Required",
+      "tabular_confidence": 0.995,
+      "tm_prediction": "Manual Review Required",
+      "tm_confidence": 0.9683,
+      "confidence_difference": 0.0267,
+      "agreement": true,
+      "match_category": "Strong Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.0047,
+        "Likely Invalid": 0.0003,
+        "Manual Review Required": 0.995
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.0055,
+        "Likely Invalid": 0.0262,
+        "Manual Review Required": 0.9683
+      }
+    },
+    {
+      "claim_id": "CLM-02348",
+      "product_category": "Automotive",
+      "product_name": "Electronic Fuel Injector Kit",
+      "ground_truth": "Manual Review Required",
+      "tabular_prediction": "Manual Review Required",
+      "tabular_confidence": 0.9949,
+      "tm_prediction": "Manual Review Required",
+      "tm_confidence": 0.613,
+      "confidence_difference": 0.3819,
+      "agreement": true,
+      "match_category": "Weak Match (>25% gap)",
+      "tabular_probabilities": {
+        "Likely Valid": 0.0031,
+        "Likely Invalid": 0.002,
+        "Manual Review Required": 0.9949
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.3741,
+        "Likely Invalid": 0.0129,
+        "Manual Review Required": 0.613
+      }
+    },
+    {
+      "claim_id": "CLM-01745",
+      "product_category": "Automotive",
+      "product_name": "Performance Shock Absorbers",
+      "ground_truth": "Likely Invalid",
+      "tabular_prediction": "Likely Invalid",
+      "tabular_confidence": 0.9976,
+      "tm_prediction": "Likely Invalid",
+      "tm_confidence": 0.9985,
+      "confidence_difference": 0.0009,
+      "agreement": true,
+      "match_category": "Strong Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.0003,
+        "Likely Invalid": 0.9976,
+        "Manual Review Required": 0.0021
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.0009,
+        "Likely Invalid": 0.9985,
+        "Manual Review Required": 0.0006
+      }
+    },
+    {
+      "claim_id": "CLM-01068",
+      "product_category": "Appliances",
+      "product_name": "Heavy-Duty Clothes Dryer",
+      "ground_truth": "Likely Invalid",
+      "tabular_prediction": "Likely Invalid",
+      "tabular_confidence": 0.9978,
+      "tm_prediction": "Likely Invalid",
+      "tm_confidence": 0.9907,
+      "confidence_difference": 0.0071,
+      "agreement": true,
+      "match_category": "Strong Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.0002,
+        "Likely Invalid": 0.9978,
+        "Manual Review Required": 0.002
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.0,
+        "Likely Invalid": 0.9907,
+        "Manual Review Required": 0.0093
+      }
+    },
+    {
+      "claim_id": "CLM-01974",
+      "product_category": "Electronics",
+      "product_name": "Gaming Desktop Rig",
+      "ground_truth": "Manual Review Required",
+      "tabular_prediction": "Manual Review Required",
+      "tabular_confidence": 0.9939,
+      "tm_prediction": "Manual Review Required",
+      "tm_confidence": 0.9677,
+      "confidence_difference": 0.0262,
+      "agreement": true,
+      "match_category": "Strong Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.0037,
+        "Likely Invalid": 0.0024,
+        "Manual Review Required": 0.9939
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.0319,
+        "Likely Invalid": 0.0004,
+        "Manual Review Required": 0.9677
+      }
+    },
+    {
+      "claim_id": "CLM-00856",
+      "product_category": "Automotive",
+      "product_name": "Ceramic Brake Pad Set",
+      "ground_truth": "Manual Review Required",
+      "tabular_prediction": "Manual Review Required",
+      "tabular_confidence": 0.994,
+      "tm_prediction": "Manual Review Required",
+      "tm_confidence": 0.9682,
+      "confidence_difference": 0.0258,
+      "agreement": true,
+      "match_category": "Strong Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.0036,
+        "Likely Invalid": 0.0024,
+        "Manual Review Required": 0.994
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.0312,
+        "Likely Invalid": 0.0006,
+        "Manual Review Required": 0.9682
+      }
+    },
+    {
+      "claim_id": "CLM-02283",
+      "product_category": "Automotive",
+      "product_name": "Ceramic Brake Pad Set",
+      "ground_truth": "Manual Review Required",
+      "tabular_prediction": "Manual Review Required",
+      "tabular_confidence": 0.994,
+      "tm_prediction": "Manual Review Required",
+      "tm_confidence": 0.958,
+      "confidence_difference": 0.036,
+      "agreement": true,
+      "match_category": "Strong Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.0037,
+        "Likely Invalid": 0.0024,
+        "Manual Review Required": 0.994
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.0411,
+        "Likely Invalid": 0.0009,
+        "Manual Review Required": 0.958
+      }
+    },
+    {
+      "claim_id": "CLM-00578",
+      "product_category": "Appliances",
+      "product_name": "Electric Range Oven",
+      "ground_truth": "Manual Review Required",
+      "tabular_prediction": "Manual Review Required",
+      "tabular_confidence": 0.9957,
+      "tm_prediction": "Manual Review Required",
+      "tm_confidence": 0.9756,
+      "confidence_difference": 0.0201,
+      "agreement": true,
+      "match_category": "Strong Match",
+      "tabular_probabilities": {
+        "Likely Valid": 0.004,
+        "Likely Invalid": 0.0003,
+        "Manual Review Required": 0.9957
+      },
+      "tm_probabilities": {
+        "Likely Valid": 0.0087,
+        "Likely Invalid": 0.0157,
+        "Manual Review Required": 0.9756
+      }
+    }
+  ]
+}

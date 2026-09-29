@@ -1,0 +1,102 @@
+{
+  "policy_id": "POL-POWERTOOLS-001",
+  "policy_name": "Heavy-Duty Power Tools & Trade Hardware Warranty",
+  "product_category": "Power Tools & Hardware",
+  "coverage_duration_months": 36,
+  "warranty_start_condition": "purchase_date",
+  "covered_faults": [
+    "Manufacturing Defect",
+    "Brushless Motor Stator Burnout",
+    "Planetary Gearbox Stripping",
+    "Electronic Trigger Switch Dropout",
+    "Chuck Wobble Defect",
+    "Charger Circuit Board Failure",
+    "Electronic Clutch Torque Sensor Dropout"
+  ],
+  "exclusions": [
+    "Concrete Slurry Water Ingress",
+    "Drop from Height Over 3 Meters",
+    "Continuous Production Factory Assembly Overload",
+    "Missing Safety Guard Removal",
+    "Altered Generator Voltage Supply Burn",
+    "Damaged Chuck from Pipe-Wrench Forcing"
+  ],
+  "claim_reporting_period_days": 30,
+  "max_repairs_before_replacement": 2,
+  "authorized_service_required": true,
+  "mandatory_documents": [
+    "purchase_receipt",
+    "fault_evidence",
+    "serial_tag_photo"
+  ],
+  "optional_documents": [
+    "warranty_card",
+    "repair_report",
+    "tool_registration_certificate"
+  ],
+  "hard_fail_rules": [
+    {
+      "rule_id": "HF-001",
+      "description": "Warranty period has expired",
+      "condition": "warranty_expired",
+      "action": "reject"
+    },
+    {
+      "rule_id": "HF-002",
+      "description": "Damage type falls under jobsite abuse or safety guard removal",
+      "condition": "excluded_damage",
+      "action": "reject"
+    },
+    {
+      "rule_id": "HF-003",
+      "description": "No proof of purchase from authorized tool dealer",
+      "condition": "no_purchase_receipt",
+      "action": "reject"
+    },
+    {
+      "rule_id": "HF-004",
+      "description": "Tool opened and internal armature re-wound by non-OEM technician",
+      "condition": "unauthorized_armature_tamper",
+      "action": "reject"
+    }
+  ],
+  "warning_rules": [
+    {
+      "rule_id": "WR-001",
+      "description": "Tool housing laser-etched serial does not match battery / receipt",
+      "condition": "serial_mismatch",
+      "action": "flag"
+    },
+    {
+      "rule_id": "WR-002",
+      "description": "Extreme carbon brush wear indicates high duty-cycle usage",
+      "condition": "extreme_wear_warning",
+      "action": "flag"
+    }
+  ],
+  "manual_review_rules": [
+    {
+      "rule_id": "MR-001",
+      "description": "Claim submitted within 7-day post-warranty grace period",
+      "condition": "borderline_warranty",
+      "action": "manual_review"
+    },
+    {
+      "rule_id": "MR-002",
+      "description": "Contradictory dates in purchase vs service record",
+      "condition": "contradictory_dates",
+      "action": "manual_review"
+    },
+    {
+      "rule_id": "MR-003",
+      "description": "Prior repair performed at unauthorized independent repair shop",
+      "condition": "unauthorized_repair",
+      "action": "manual_review"
+    }
+  ],
+  "grace_period_days": 7,
+  "replacement_conditions": {
+    "min_repairs_for_replacement": 2,
+    "max_product_age_months": 36
+  }
+}

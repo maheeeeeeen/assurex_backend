@@ -1,0 +1,19 @@
+{
+  "model_architecture": "MobileNetV2 + GlobalAveragePooling + Dense(128) + Dense(3, Softmax)",
+  "input_shape": [
+    224,
+    224,
+    3
+  ],
+  "normalization": "[-1.0, 1.0]",
+  "training_images_sampled": 900,
+  "validation_images": 375,
+  "val_accuracy": 0.9547,
+  "val_weighted_f1": 0.9527,
+  "classes": [
+    "Likely Valid",
+    "Likely Invalid",
+    "Manual Review Required"
+  ],
+  "trained_at": "2026-09-26 01:54:01"
+}

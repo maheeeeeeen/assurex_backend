@@ -1,0 +1,103 @@
+{
+  "policy_id": "POL-AUTOMOTIVE-001",
+  "policy_name": "Automotive Parts Warranty",
+  "product_category": "Automotive",
+  "coverage_duration_months": 12,
+  "warranty_start_condition": "purchase_date",
+  "covered_faults": [
+    "Manufacturing Defect",
+    "Premature Wear",
+    "Material Failure",
+    "Electrical Component Failure",
+    "Seal or Gasket Failure"
+  ],
+  "exclusions": [
+    "Accidental Damage",
+    "Racing or Off-Road Use",
+    "Improper Installation",
+    "Neglected Maintenance",
+    "Cosmetic Wear",
+    "Damage from Incompatible Parts",
+    "Environmental Corrosion"
+  ],
+  "claim_reporting_period_days": 14,
+  "max_repairs_before_replacement": 2,
+  "authorized_service_required": true,
+  "mandatory_documents": [
+    "purchase_receipt",
+    "fault_evidence",
+    "product_image"
+  ],
+  "optional_documents": [
+    "warranty_card",
+    "repair_report",
+    "vehicle_registration",
+    "mechanic_diagnostic_report"
+  ],
+  "hard_fail_rules": [
+    {
+      "rule_id": "HF-001",
+      "description": "Warranty period has expired",
+      "condition": "warranty_expired",
+      "action": "reject"
+    },
+    {
+      "rule_id": "HF-002",
+      "description": "Damage type is in exclusion list",
+      "condition": "excluded_damage",
+      "action": "reject"
+    },
+    {
+      "rule_id": "HF-003",
+      "description": "No proof of purchase provided",
+      "condition": "no_purchase_receipt",
+      "action": "reject"
+    },
+    {
+      "rule_id": "HF-004",
+      "description": "Part installed in incompatible vehicle",
+      "condition": "incompatible_vehicle",
+      "action": "reject"
+    }
+  ],
+  "warning_rules": [
+    {
+      "rule_id": "WR-001",
+      "description": "Serial number does not match across documents",
+      "condition": "serial_mismatch",
+      "action": "flag"
+    },
+    {
+      "rule_id": "WR-002",
+      "description": "Claim submitted close to reporting deadline",
+      "condition": "late_reporting",
+      "threshold_days": 3,
+      "action": "flag"
+    }
+  ],
+  "manual_review_rules": [
+    {
+      "rule_id": "MR-001",
+      "description": "Warranty expiry within grace period",
+      "condition": "borderline_warranty",
+      "action": "manual_review"
+    },
+    {
+      "rule_id": "MR-002",
+      "description": "Contradictory dates detected in claim",
+      "condition": "contradictory_dates",
+      "action": "manual_review"
+    },
+    {
+      "rule_id": "MR-003",
+      "description": "Repair performed by unauthorized service center",
+      "condition": "unauthorized_repair",
+      "action": "manual_review"
+    }
+  ],
+  "grace_period_days": 3,
+  "replacement_conditions": {
+    "min_repairs_for_replacement": 2,
+    "max_product_age_months": 18
+  }
+}

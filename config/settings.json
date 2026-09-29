@@ -1,0 +1,32 @@
+{
+  "app_name": "AssureX Claim Engine",
+  "version": "1.0.0",
+  "debug": false,
+  "secret_key": "assurex-dev-secret-key-change-in-production-2026",
+  "algorithm": "HS256",
+  "access_token_expire_minutes": 1440,
+  "database_url": "sqlite:///database/assurex.db",
+  "upload_dir": "uploads",
+  "max_upload_size_mb": 10,
+  "allowed_file_types": [".pdf", ".jpg", ".jpeg", ".png"],
+  "warranty_expiry_alert_days": 30,
+  "prediction_timeout_seconds": 5,
+  "model_version": "v1",
+  "teachable_machine_model_path": "model/teachable_machine/",
+  "python_model_path": "model/",
+  "cors_origins": [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173"
+  ],
+  "roles": ["customer", "employee", "reviewer", "admin"],
+  "claim_statuses": [
+    "Draft",
+    "Submitted",
+    "Under Evaluation",
+    "Additional Information Required",
+    "Manual Review",
+    "Approved",
+    "Rejected",
+    "Closed"
+  ]
+}

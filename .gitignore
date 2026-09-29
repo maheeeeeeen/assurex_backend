@@ -1,0 +1,84 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# SQLite
+*.db
+*.sqlite3
+
+# Node
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model files (large)
+*.h5
+*.pkl
+*.joblib
+!backend/model/.gitkeep
+!backend/model/teachable_machine/.gitkeep
+!backend/model/best_model.joblib
+!backend/model/teachable_machine/keras_model.h5
+
+# Uploaded files
+backend/uploads/
+
+# Generated card images (bulk generation ~300MB, generate via backend/dataset_generator/generate_cards.py)
+sample_claims/cards/
+!sample_claims/cards/.gitkeep
+backend/data/cards/
+
+# Coverage
+htmlcov/
+.coverage
+.coverage.*
+
+# pytest
+.pytest_cache/
+
+# Logs
+*.log
+
+# Temporary backup files and migration archives
+*.backup
+*.backup_*
+*backup_2500*
+backend/diagnose_step1.py
+backend/test_step4_policies.py
+**/backup/
+**/backup_original/
+**/scratch/
+uploads/

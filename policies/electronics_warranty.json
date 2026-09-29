@@ -1,0 +1,102 @@
+{
+  "policy_id": "POL-ELECTRONICS-001",
+  "policy_name": "Standard Electronics Warranty",
+  "product_category": "Electronics",
+  "coverage_duration_months": 24,
+  "warranty_start_condition": "purchase_date",
+  "covered_faults": [
+    "Manufacturing Defect",
+    "Electrical Failure",
+    "Software Malfunction",
+    "Component Failure",
+    "Display Defect"
+  ],
+  "exclusions": [
+    "Accidental Damage",
+    "Water Damage",
+    "Physical Impact",
+    "Cosmetic Damage",
+    "Unauthorized Modification",
+    "Jailbreaking or Rooting",
+    "Third-Party Accessory Damage"
+  ],
+  "claim_reporting_period_days": 30,
+  "max_repairs_before_replacement": 3,
+  "authorized_service_required": true,
+  "mandatory_documents": [
+    "purchase_receipt",
+    "warranty_card",
+    "fault_evidence"
+  ],
+  "optional_documents": [
+    "product_image",
+    "repair_report",
+    "serial_number_photo"
+  ],
+  "hard_fail_rules": [
+    {
+      "rule_id": "HF-001",
+      "description": "Warranty period has expired",
+      "condition": "warranty_expired",
+      "action": "reject"
+    },
+    {
+      "rule_id": "HF-002",
+      "description": "Damage type is in exclusion list",
+      "condition": "excluded_damage",
+      "action": "reject"
+    },
+    {
+      "rule_id": "HF-003",
+      "description": "No proof of purchase provided",
+      "condition": "no_purchase_receipt",
+      "action": "reject"
+    }
+  ],
+  "warning_rules": [
+    {
+      "rule_id": "WR-001",
+      "description": "Serial number does not match across documents",
+      "condition": "serial_mismatch",
+      "action": "flag"
+    },
+    {
+      "rule_id": "WR-002",
+      "description": "Optional supporting documents are missing",
+      "condition": "missing_optional_docs",
+      "action": "flag"
+    },
+    {
+      "rule_id": "WR-003",
+      "description": "Product has had multiple prior repairs",
+      "condition": "high_repair_count",
+      "threshold": 2,
+      "action": "flag"
+    }
+  ],
+  "manual_review_rules": [
+    {
+      "rule_id": "MR-001",
+      "description": "Warranty expiry within grace period",
+      "condition": "borderline_warranty",
+      "action": "manual_review"
+    },
+    {
+      "rule_id": "MR-002",
+      "description": "Contradictory dates detected in claim",
+      "condition": "contradictory_dates",
+      "action": "manual_review"
+    },
+    {
+      "rule_id": "MR-003",
+      "description": "Repair performed by unauthorized service center",
+      "condition": "unauthorized_repair",
+      "action": "manual_review"
+    }
+  ],
+  "grace_period_days": 7,
+  "replacement_conditions": {
+    "min_repairs_for_replacement": 3,
+    "max_product_age_months": 36
+  }
+}
