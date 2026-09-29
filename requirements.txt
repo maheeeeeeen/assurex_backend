@@ -21,7 +21,7 @@ lightgbm==4.5.0
 joblib==1.4.2
 
 # ML - Teachable Machine (Keras)
-tensorflow==2.17.0
+tensorflow>=2.17.0
 pillow==10.4.0
 
 # OCR
