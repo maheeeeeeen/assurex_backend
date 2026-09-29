@@ -68,15 +68,17 @@ ALLOWED_ORIGINS = [
     "http://127.0.0.1:5175",
     "http://localhost:8000",
     "http://127.0.0.1:8000",
+    "https://assurex-frontend-rose.vercel.app",
 ]
 
 extra_origins = os.getenv("CORS_ORIGINS", "")
 if extra_origins:
-    ALLOWED_ORIGINS.extend(extra_origins.split(","))
+    ALLOWED_ORIGINS.extend([origin.strip() for origin in extra_origins.split(",") if origin.strip()])
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=ALLOWED_ORIGINS,
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
